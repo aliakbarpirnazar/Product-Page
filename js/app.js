@@ -56,10 +56,14 @@ const searchPriceHandler = (event) => {
   });
 };
 
-searchInput.addEventListener("keyup", searchHandler);
+const start = () => {
+  searchInput.addEventListener("keyup", searchHandler);
 
-priceButton.addEventListener("click", searchPriceHandler);
+  priceButton.addEventListener("click", searchPriceHandler);
 
-buttons.forEach((button) => {
-  button.addEventListener("click", filterHandler);
-});
+  buttons.forEach((button) => {
+    button.addEventListener("click", filterHandler);
+  });
+};
+
+window.addEventListener("load", start);
